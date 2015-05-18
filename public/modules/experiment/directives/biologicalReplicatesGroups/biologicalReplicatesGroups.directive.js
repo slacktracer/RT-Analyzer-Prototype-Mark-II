@@ -11,7 +11,7 @@
                 controller
             ],
             controllerAs: 'biologicalReplicatesGroups',
-            templateUrl: '/modules/experiment/directives/biologicalReplicatesGroups/biologicalReplicatesGroups.directive.html'
+            templateUrl: 'modules/experiment/directives/biologicalReplicatesGroups/biologicalReplicatesGroups.directive.html'
         };
         /**
          * functions

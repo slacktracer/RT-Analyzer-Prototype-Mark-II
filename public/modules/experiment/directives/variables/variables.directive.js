@@ -15,7 +15,7 @@
             scope: {
                 type: '='
             },
-            templateUrl: '/modules/experiment/directives/variables/variables.directive.html'
+            templateUrl: 'modules/experiment/directives/variables/variables.directive.html'
         };
         /**
          * functions
