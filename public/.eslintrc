@@ -3,7 +3,8 @@
         "browser": true
     },
     "globals": {
-        "angular": false
+        "angular": false,
+        "Please": false
     },
     "rules": {
         "no-var": 0,

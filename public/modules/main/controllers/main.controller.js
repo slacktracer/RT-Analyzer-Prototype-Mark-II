@@ -7,6 +7,6 @@
         var
             vm;
         vm = this;
-        vm.currentView = 'modules/main/main.view.html';
+        vm.currentView = 'modules/experiment/templates/experiment.template.html';
     }
 }());

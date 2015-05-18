@@ -4,7 +4,7 @@
         <meta
             charset="utf-8"
             >
-        <title>RT-Analyzer Prototype Mark II 0.0.0</title>
+        <title>RT-Analyzer Prototype Mark II 0.1.0</title>
         <meta
             content="initial-scale=1, maximum-scale=1, minimal-ui, user-scalable=no"
             name="viewport"
@@ -47,12 +47,17 @@
                 data-ng-include="main.currentView"
                 >
             </div>
+            <hr>
             <a
                 href="http://www.freepik.com/free-photos-vectors/abstract"
                 >
                 Abstract vector designed by Freepik
             </a>
         </div>
+        <script
+            src="3rd-party/assets/Please/js/Please.min.js"
+            >
+        </script>
         <script
             src="3rd-party/assets/jquery/js/jquery-2.1.4.min.js"
             >
@@ -74,11 +79,35 @@
             >
         </script>
         <script
-            src="modules/main/main.controller.js"
+            src="modules/main/controllers/main.controller.js"
             >
         </script>
         <script
             src="modules/experiment/experiment.module.js"
+            >
+        </script>
+        <script
+            src="modules/experiment/constants/please.constant.js"
+            >
+        </script>
+        <script
+            src="modules/experiment/constants/variableTypes.constant.js"
+            >
+        </script>
+        <script
+            src="modules/experiment/controllers/experiment.controller.js"
+            >
+        </script>
+        <script
+            src="modules/experiment/directives/biologicalReplicatesGroups/biologicalReplicatesGroups.directive.js"
+            >
+        </script>
+        <script
+            src="modules/experiment/directives/variables/variables.directive.js"
+            >
+        </script>
+        <script
+            src="modules/experiment/services/experiment.service.js"
             >
         </script>
     </body>
