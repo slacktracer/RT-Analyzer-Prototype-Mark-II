@@ -1,5 +1,7 @@
 (function () {
     'use strict';
     angular
-        .module('experiment', []);
+        .module('experiment', [
+            'plates'
+        ]);
 }());

@@ -107,15 +107,23 @@
                     variableName;
                 variableName = service.data[variableType].splice(index, 1).toString();
                 service.metadata[variableType].colours.splice(index, 1);
+                if (variableType === 'probes') {
+                    prepareForProbeRemoval(variableName);
+                }
                 if (variableType === 'samples') {
                     prepareForSampleRemoval(variableName);
                     delete service.metadata.biologicalReplicatesGroups.samples[variableName];
                 }
             };
         }
+        function prepareForProbeRemoval(probeName) {
+            prepareControlProbeForProbeRemoval(probeName);
+            preparePlatesForProbeRemoval(probeName);
+        }
         function prepareForSampleRemoval(sampleName) {
             prepareControlSampleForSampleRemoval(sampleName);
             prepareBiologicalReplicatesGroupsForSampleRemoval(sampleName);
+            preparePlatesForSampleRemoval(sampleName);
         }
         function removeBiologicalReplicatesGroup(name) {
             service.data.biologicalReplicatesGroups[name].forEach(function forEach(sampleName) {
@@ -138,10 +146,33 @@
                 removeBiologicalReplicatesGroup(biologicalReplicatesGroupToRemoveName);
             }
         }
+        function prepareControlProbeForProbeRemoval(probeName) {
+            if (service.data.controlProbe === probeName) {
+                service.data.controlProbe = '';
+            }
+        }
         function prepareControlSampleForSampleRemoval(sampleName) {
             if (service.data.controlSample === sampleName) {
                 service.data.controlSample = '';
             }
+        }
+        function preparePlatesForProbeRemoval(probeName) {
+            service.data.plates.forEach(function forEach(plate) {
+                plate.positions.forEach(function forEach(position) {
+                    if (plate[position].probe === probeName) {
+                        plate[position].probe = '';
+                    }
+                });
+            });
+        }
+        function preparePlatesForSampleRemoval(sampleName) {
+            service.data.plates.forEach(function forEach(plate) {
+                plate.positions.forEach(function forEach(position) {
+                    if (plate[position].sample === sampleName) {
+                        plate[position].sample = '';
+                    }
+                });
+            });
         }
     }
 }());
