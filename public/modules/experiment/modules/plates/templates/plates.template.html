@@ -7,6 +7,7 @@
         class="
             plate
         "
+        data-ng-init="plateIndex = $index"
         data-ng-repeat="plate in plates.data.plates"
         >
         <h3>
@@ -29,7 +30,8 @@
                     col-md-6
                 "
                 data-pcr-allocator
-                type="'sample'"
+                data-plate-index="plateIndex"
+                data-type="'sample'"
                 >
             </div>
             <div
@@ -37,7 +39,8 @@
                     col-md-6
                 "
                 data-pcr-allocator
-                type="'probe'"
+                data-plate-index="plateIndex"
+                data-type="'probe'"
                 >
             </div>
         </div>

@@ -25,7 +25,7 @@
                 id
                 item
             "
-            data-ng-repeat="column in allocator.data.plates[0].columns"
+            data-ng-repeat="column in allocator.data.plates[allocator.plateIndex].columns"
             tabindex="0"
             >
             {{column}}
@@ -35,7 +35,7 @@
         class="
             row
         "
-        data-ng-repeat="row in allocator.data.plates[0].rows"
+        data-ng-repeat="row in allocator.data.plates[allocator.plateIndex].rows"
         >
         <div
             class="
@@ -52,7 +52,10 @@
                     item
                     position
                 "
-                data-ng-repeat="column in allocator.data.plates[0].columns"
+                data-ng-repeat="column in allocator.data.plates[allocator.plateIndex].columns"
+                data-ng-style="{
+                    'background-color': allocator.style.backgroundColor(allocator.variableTypeAsPropertyName, allocator.plateIndex, row + column)
+                }"
                 tabindex="0"
                 >
         </div>

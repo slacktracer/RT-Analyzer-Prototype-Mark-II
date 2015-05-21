@@ -84,7 +84,9 @@
                                 experiment.metadata.samples.add(sample);
                                 experiment.data.plates[plateIndex][position].sample = sample;
                             }
-                            experiment.data.plates[plateIndex][position].cycle = cycle;
+                            if (position) {
+                                experiment.data.plates[plateIndex][position].cycle = cycle;
+                            }
                         }
                     });
                 }
