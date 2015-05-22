@@ -27,6 +27,20 @@
                 samples: []
             },
             metadata: {
+                analysis: {
+                    'step 1': {
+                        done: false
+                    },
+                    'step 2': {
+                        done: false
+                    },
+                    'step 3': {
+                        done: false
+                    },
+                    'step 4': {
+                        done: false
+                    }
+                },
                 biologicalReplicatesGroups: {
                     add: addBiologicalReplicatesGroup,
                     samples: {},

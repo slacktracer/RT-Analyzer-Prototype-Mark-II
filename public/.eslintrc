@@ -4,6 +4,7 @@
     },
     "globals": {
         "angular": false,
+        "Papa": false,
         "Please": false
     },
     "rules": {

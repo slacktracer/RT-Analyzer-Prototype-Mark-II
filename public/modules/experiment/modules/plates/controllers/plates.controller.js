@@ -16,6 +16,5 @@
         vm = this;
         vm.addPlate = plates.addPlate;
         vm.data = experiment.data;
-        vm.metadata = experiment.metadata;
     }
 }());

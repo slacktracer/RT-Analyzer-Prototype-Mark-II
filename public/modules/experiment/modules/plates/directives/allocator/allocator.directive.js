@@ -57,7 +57,7 @@
                     return colour;
                 }
                 return '#f8f8f8';
-            };
+            }
         }
     }
 }());

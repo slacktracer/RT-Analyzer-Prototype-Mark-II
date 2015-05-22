@@ -2,6 +2,7 @@
     'use strict';
     angular
         .module('experiment', [
-            'plates'
+            'plates',
+            'processor'
         ]);
 }());
