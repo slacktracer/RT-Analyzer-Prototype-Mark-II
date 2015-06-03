@@ -5,7 +5,8 @@
     "globals": {
         "angular": false,
         "Papa": false,
-        "Please": false
+        "Please": false,
+        "ss": false
     },
     "rules": {
         "no-var": 0,

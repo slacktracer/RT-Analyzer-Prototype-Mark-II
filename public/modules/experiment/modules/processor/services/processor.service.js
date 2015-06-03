@@ -82,14 +82,14 @@
                     if (experiment.data.analysis['step 3'][sampleName][probeName].standardDeviation) {
                         standardDeviationRow.push(experiment.data.analysis['step 3'][sampleName][probeName].standardDeviation);
                     } else {
-                        standardDeviationRow.push("");
+                        standardDeviationRow.push('');
                     }
                 });
                 formattedStandardError.headers.forEach(function forEach(probeName) {
                     if (experiment.data.analysis['step 3'][sampleName][probeName].standardError) {
                         standardErrorRow.push(experiment.data.analysis['step 3'][sampleName][probeName].standardError);
                     } else {
-                        standardErrorRow.push("");
+                        standardErrorRow.push('');
                     }
                 });
                 formatted.rows.push(row);
@@ -184,8 +184,8 @@
                         standardError;
                     if (experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].length) {
                         experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].total = 0;
-                        experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].forEach(function forEach(relativeExpressionValue) {
-                            experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].total += relativeExpressionValue;
+                        experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].forEach(function forEach(innerRelativeExpressionValue) {
+                            experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].total += innerRelativeExpressionValue;
                         });
                         relativeExpressionValue = experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].total / experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe].length;
                         standardDeviation = Math.sqrt(simpleStatistics.variance(experiment.data.analysis['step 3'][biologicalReplicatesGroup][probe]));
